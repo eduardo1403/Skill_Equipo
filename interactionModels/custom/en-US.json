@@ -1,0 +1,229 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "catehm",
+              "elicitationRequired": true,
+              "type": "TipoHM",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.938646155292.1604232955528"
+              }
+            }
+          ],
+          "name": "CategoriaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "bye"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "catehm",
+              "type": "TipoHM",
+              "samples": [
+                "{catehm}",
+                "de {catehm}"
+              ]
+            }
+          ],
+          "name": "CategoriaIntent",
+          "samples": [
+            "{catehm}",
+            "de {catehm}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "VerPrendasIntent",
+          "samples": [
+            "I want to see clothes"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.FirstName"
+            }
+          ],
+          "name": "AddUserIntent",
+          "samples": [
+            "is {nombre}",
+            "the name is {nombre}",
+            "my name is {nombre}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "categoria",
+              "type": "Categoria"
+            }
+          ],
+          "name": "BuscarPrendaIntent",
+          "samples": [
+            "I want to see clothes  {categoria}",
+            "I want to see the clothes  {categoria}",
+            "show clothes  {categoria}",
+            "show me the category  {categoria}",
+            "I want to see the category  {categoria}",
+            "I want to see clothes  {categoria}",
+            "I want to see clothes from the category  {categoria}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "tipo",
+              "type": "Tipo"
+            }
+          ],
+          "name": "BuscarTipoPrendaIntent",
+          "samples": [
+            "show me {tipo}",
+            "show me the {tipo}",
+            "{tipo}",
+            "I want to see them {tipo}",
+            "I want to see {tipo}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "MostrarMapaIntent",
+          "samples": [
+            "where is sports store located",
+            "where is the store located",
+            "where is the sportstore store located",
+            "where they are located"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "AvisoPrivacidadIntent",
+          "samples": [
+            "How can I see the privacy notice",
+            "I want to see the privacy notice",
+            "I can see the privacy notice",
+            "show me the privacy notice"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "MasVendidoIntent",
+          "samples": [
+            "the most sold",
+            "I want to see the best sellers",
+            "show me the best seller"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "de caballero"
+              }
+            },
+            {
+              "name": {
+                "value": "de dama"
+              }
+            }
+          ],
+          "name": "TipoHM"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "de mujer"
+              }
+            },
+            {
+              "name": {
+                "value": "de hombre"
+              }
+            }
+          ],
+          "name": "Categoria"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "leggins"
+              }
+            },
+            {
+              "name": {
+                "value": "tops"
+              }
+            },
+            {
+              "name": {
+                "value": "conjuntos"
+              }
+            },
+            {
+              "name": {
+                "value": "shorts"
+              }
+            },
+            {
+              "name": {
+                "value": "camisas deportivas"
+              }
+            },
+            {
+              "name": {
+                "value": "pants"
+              }
+            }
+          ],
+          "name": "Tipo"
+        }
+      ],
+      "invocationName": "sportswear"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Intentalo de nuevo"
+          }
+        ],
+        "id": "Elicit.Slot.938646155292.1604232955528"
+      }
+    ]
+  }
+}

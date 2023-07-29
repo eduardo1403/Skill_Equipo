@@ -1,0 +1,244 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "catehm",
+              "elicitationRequired": true,
+              "type": "TipoHM",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.938646155292.1604232955528"
+              }
+            }
+          ],
+          "name": "CategoriaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "necesito ayuda",
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "hasta luego",
+            "adios",
+            "adiós"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "catehm",
+              "type": "TipoHM",
+              "samples": [
+                "{catehm}",
+                "de {catehm}"
+              ]
+            }
+          ],
+          "name": "CategoriaIntent",
+          "samples": [
+            "{catehm}",
+            "de {catehm}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "VerPrendasIntent",
+          "samples": [
+            "quiero ver prendas"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.FirstName"
+            }
+          ],
+          "name": "AddUserIntent",
+          "samples": [
+            "es {nombre}",
+            "el nombre es {nombre}",
+            "mi nombre es {nombre}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "categoria",
+              "type": "Categoria"
+            }
+          ],
+          "name": "BuscarPrendaIntent",
+          "samples": [
+            "muestra la categoria {categoria}",
+            "muestra la categoría {categoria}",
+            "quiero ver ropa  {categoria}",
+            "quiero ver la ropa  {categoria}",
+            "muestra la ropa  {categoria}",
+            "muestrame la categoria  {categoria}",
+            "quiero ver la categoria  {categoria}",
+            "quiero ver prendas  {categoria}",
+            "quiero ver prendas de la categoria  {categoria}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "tipo",
+              "type": "Tipo"
+            }
+          ],
+          "name": "BuscarTipoPrendaIntent",
+          "samples": [
+            "muestra las {tipo}",
+            "muestra los {tipo}",
+            "muestrame las {tipo}",
+            "muestrame los {tipo}",
+            "{tipo}",
+            "quiero ver las {tipo}",
+            "quiero ver los {tipo}",
+            "quiero ver {tipo}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "MostrarMapaIntent",
+          "samples": [
+            "ubicación de la tienda",
+            "dame la ubicación de la tienda",
+            "muestra la ubicación de la tienda",
+            "donde se ubica sportstore",
+            "donde se ubica la tienda",
+            "donde se ubica la tienda sportstore",
+            "donde se ubican"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "AvisoPrivacidadIntent",
+          "samples": [
+            "muestra el aviso de privacidad",
+            "como puedo ver el aviso de privacidad",
+            "quiero ver el aviso de privacidad",
+            "puedo ver el aviso de privacidad",
+            "muestrame el aviso de privacidad"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "MasVendidoIntent",
+          "samples": [
+            "quiero ver lo más vendido",
+            "lo más vendido",
+            "muestra lo más vendido",
+            "lo mas vendido",
+            "quiero ver lo mas vendido",
+            "muestrame lo mas vendido"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "de caballero"
+              }
+            },
+            {
+              "name": {
+                "value": "de dama"
+              }
+            }
+          ],
+          "name": "TipoHM"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "de mujer"
+              }
+            },
+            {
+              "name": {
+                "value": "de hombre"
+              }
+            }
+          ],
+          "name": "Categoria"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "leggins"
+              }
+            },
+            {
+              "name": {
+                "value": "tops"
+              }
+            },
+            {
+              "name": {
+                "value": "conjuntos"
+              }
+            },
+            {
+              "name": {
+                "value": "shorts"
+              }
+            },
+            {
+              "name": {
+                "value": "camisas deportivas"
+              }
+            },
+            {
+              "name": {
+                "value": "pants"
+              }
+            }
+          ],
+          "name": "Tipo"
+        }
+      ],
+      "invocationName": "ropa deportiva"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Intentalo de nuevo"
+          }
+        ],
+        "id": "Elicit.Slot.938646155292.1604232955528"
+      }
+    ]
+  }
+}
